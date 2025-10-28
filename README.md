@@ -11,7 +11,7 @@ Sockets Links.
 ## PROGRAM
 
 ## server.py
-
+```
 import socket
 s=socket.socket()
 s.bind(('localhost',8080))
@@ -20,9 +20,9 @@ c,addr=s.accept()
 while True:
     ClientMessage=c.recv(1024).decode()
     c.send(ClientMessage.encode())
-
+```
 ## client.py
-
+```
 import socket
 s=socket.socket()
 s.connect(('localhost',8080))
@@ -31,7 +31,7 @@ while True:
     s.send(msg.encode())
     print("Server > ",s.recv(1024).decode())
 
-
+```
 ## OUPUT
 ## client.py
 <img width="602" height="267" alt="image" src="https://github.com/user-attachments/assets/921cd3b6-97f4-4d6c-92c9-3820149725ce" />
